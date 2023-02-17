@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadazks6285-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadazks6285-tenant-component
+    app.kubernetes.io/part-of: loadazks6285-tenant-app
+  name: loadazks6285-tenant-component
+  namespace: loadazks6285-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: loadazks6285-tenant-component
+status:
+  loadBalancer: {}
